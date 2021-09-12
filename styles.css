@@ -1,0 +1,79 @@
+:root {
+  /* TEXT */
+  --dark-blue-desat: hsl(238, 29%, 16%);
+  --dark-blue-gray: hsl(237, 12%, 33%);
+  --dark-grey-blue: hsl(240, 6%, 50%);
+  --soft-red: hsl(14, 88%, 65%);
+  /*BACKGROUND GRADIENT*/
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /*DIVIDERS*/
+  --light-grey-blue: hsl(240, 5%, 91%);
+  /*TYPOGRAPHY*/
+  font-size: 62.5%;
+  font-family: "Kumbh Sans", sans-serif;
+  box-sizing: border-box;
+  background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 92rem;
+  height: fit-content;
+  background-color: #ffffff;
+  border-radius: 23px;
+}
+
+.media-desktop {
+  display: none;
+}
+
+.faq {
+  padding: 0 2rem;
+  color: var(--dark-blue-gray);
+  font-size: 1.3rem;
+}
+
+.faq h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  color: var(--dark-blue-desat);
+}
+
+.media-mobile {
+  width: 100%;
+  margin-top: -11rem;
+}
+
+.media-mobile img {
+  transform: translateX(-15px);
+  background-image: url("images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom -15px right;
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    margin: 7rem auto;
+  }
+
+  .media,
+  .faq {
+    flex: 1;
+  }
+}
