@@ -37,7 +37,7 @@ body {
   height: fit-content;
   background-color: #ffffff;
   border-radius: 23px;
-  box-shadow: hsl(237, 12%, 33%);
+  box-shadow: 0px 20px 30px hsla(237, 12%, 33%, 60%);
   /* padding: 1rem; */
 }
 
@@ -132,7 +132,7 @@ button:hover {
   .container {
     display: flex;
     flex-direction: row;
-    margin: 7rem auto;
+    /* margin: 7rem auto; */
     padding: 4rem 0;
     background-image: url("images/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
