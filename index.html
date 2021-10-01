@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css" type="text/css">
   <link rel="stylesheet" href="normalize.css" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <script src="faq.js" type="text/javascript"></script>
+  
 
   <title> FAQ Accordion Card</title>
 </head>
@@ -22,38 +22,49 @@
         <img class="woman-mobile" src="images/illustration-woman-online-mobile.svg" alt="#">
       </div>
       <div class="media-desktop">
-        <img class="box" src="images/illustration-box-desktop.svg" alt="#"> 
-        <img class="woman-desktop" src="images/illustration-woman-online-desktop.svg" alt="#">
+        <div class="box">
+          <img src="images/illustration-box-desktop.svg" alt="#"> 
+        </div>
+        <div class="woman-desktop">
+          <img class="woman-desktop" src="images/illustration-woman-online-desktop.svg" alt="#">
+        </div>
       </div>
     </div>
 
     <div class="faq">
       <h1>FAQ</h1>
-    <div class="accordion-questions">
+    <div class="accordion">
+
       <div class="accordion-item">
-        <div class="accordion-button">How many team members can I invite?<span><img src="images/icon-arrow-down.svg"></span></div>
-        <p class="accordion-info">You can invite up to 2 additional users on the Free plan. There is no limit on 
+          <button class="accordion-question collapse "> How many team members can I invite?</button>
+          <p class="accordion-content">You can invite up to 2 additional users on the Free plan. There is no limit on 
           team members for the Premium plan.</p> 
       </div>
+
       <div class="accordion-item">
-        <div class="accordion-button">What is the maximum file upload size?<span><img src="images/icon-arrow-down.svg"></span></div>
-        <p class="accordion-info">No more than 2GB. All files in your account must fit your allotted storage space.</p> 
+        <button class="accordion-question collapse ">What is the maximum file upload size?</button>
+        <p class="accordion-content">No more than 2GB. All files in your account must fit your allotted storage space.</p> 
       </div>
+
       <div class="accordion-item">
-        <div class="accordion-button">How do I reset my password?<span><img src="images/icon-arrow-down.svg"></span></div>
-        <p class="accordion-info">   Click “Forgot password” from the login page or “Change password” from your profile page.
+        <button class="accordion-question collapse ">How do I reset my password?</button>
+        <p class="accordion-content">   Click “Forgot password” from the login page or “Change password” from your profile page.
           A reset link will be emailed to you.</p> 
-      </div>
+       </div>
+
       <div class="accordion-item">
-        <div class="accordion-button">Can I cancel my subscription?<span><img src="images/icon-arrow-down.svg"></span></div>
-        <p class="accordion-info"> Yes! Send us a message and we’ll process your request no questions asked.</p> 
+        <button class="accordion-question collapse ">Can I cancel my subscription?</button>
+        <p class="accordion-content"> Yes! Send us a message and we’ll process your request no questions asked.</p> 
       </div>
+      
       <div class="accordion-item">
-        <div class="accordion-button"> Do you provide additional support?<span><img src="images/icon-arrow-down.svg"></span></div>
-        <p class="accordion-info">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p> 
+        <button class="accordion-question collapse "> Do you provide additional support?</button>
+        <p class="accordion-content">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p> 
       </div>
+
     </div>
     </div>
   </div>  
+  <script src="faq.js" type="text/javascript"></script>
 </body>
 </html>

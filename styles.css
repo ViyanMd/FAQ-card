@@ -24,8 +24,8 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  padding-top: 4rem;
+  padding: 3rem;
+  /* padding-top: 4rem; */
   /* overflow: hidden; */
 }
 
@@ -34,11 +34,11 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: 92rem;
-  height: max-content;
+  height: fit-content;
   background-color: #ffffff;
   border-radius: 23px;
   box-shadow: hsl(237, 12%, 33%);
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .media-desktop {
@@ -55,7 +55,8 @@ body {
 
 .faq h1 {
   text-align: center;
-  font-size: 3.2rem;
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
   color: var(--dark-blue-desat);
 }
 
@@ -75,22 +76,56 @@ body {
   padding-bottom: 15px;
 }
 
-.accordion-info {
-  display: none;
-}
-
 .accordion-item {
-  padding: 1.5em 0;
-  border-bottom: 1px solid var(--light-grey-blue);
+  margin-top: 2rem;
+  border-bottom: 1px solid #e8e8ea;
+  color: var(--dark-blue-gray);
+  font-size: 1.4rem;
 }
 
-.accordion-button {
+button {
+  background-color: transparent;
+  border: transparent;
+  text-align: left;
+  padding: 0;
+  color: var(--dark-blue-desat);
+}
+
+button:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.accordion-question {
   display: flex;
+  width: 100%;
+  align-items: center;
   justify-content: space-between;
 }
 
-.accordion-button span {
-  padding-left: 1.9em;
+.accordion-question.collapse::after {
+  content: url("images/icon-arrow-down.svg");
+  height: 13px;
+  width: 10px;
+  transition: transform 300ms ease-in-out;
+}
+
+.accordion-question.show {
+  font-weight: 700;
+}
+
+.accordion-question.show::after {
+  content: url("images/icon-arrow-down.svg");
+  height: 13px;
+  width: 10px;
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  width: 95%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease-in-out;
+  color: var(--dark-grey-blue);
 }
 
 @media screen and (min-width: 900px) {
@@ -98,10 +133,51 @@ body {
     display: flex;
     flex-direction: row;
     margin: 7rem auto;
+    padding: 4rem 0;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -52rem -27rem;
   }
 
   .media,
   .faq {
     flex: 1;
+    /* overflow: hidden; */
+  }
+
+  .faq h1 {
+    text-align: left;
+  }
+
+  .accordion {
+    text-align: left;
+    margin-top: 6rem;
+    width: 75%;
+  }
+
+  .media-mobile {
+    display: none;
+  }
+
+  .media-desktop {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 7rem;
+  }
+
+  .box {
+    position: absolute;
+    top: 13rem;
+    left: -9.2rem;
+  }
+
+  .woman-desktop {
+    overflow: hidden;
+  }
+
+  .woman-desktop img {
+    margin-left: -8rem;
   }
 }
