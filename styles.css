@@ -4,19 +4,28 @@
   --dark-blue-gray: hsl(237, 12%, 33%);
   --dark-grey-blue: hsl(240, 6%, 50%);
   --soft-red: hsl(14, 88%, 65%);
+
   /*BACKGROUND GRADIENT*/
   --soft-violet: hsl(273, 75%, 66%);
   --soft-blue: hsl(240, 73%, 65%);
+
   /*DIVIDERS*/
   --light-grey-blue: hsl(240, 5%, 91%);
+
   /*TYPOGRAPHY*/
   font-size: 62.5%;
   font-family: "Kumbh Sans", sans-serif;
   box-sizing: border-box;
+
+  /*BACKGROUND*/
   background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.media-desktop {
+  display: none;
 }
 
 body {
@@ -24,26 +33,19 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  padding: 3rem;
-  /* padding-top: 4rem; */
-  /* overflow: hidden; */
+  padding: 2rem;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 92rem;
+  width: min(92rem, 100%);
+  margin: 13rem 0 5rem;
   height: fit-content;
   background-color: #ffffff;
   border-radius: 23px;
   box-shadow: 0px 20px 30px hsla(237, 12%, 33%, 60%);
-  margin-top: 5rem;
-  /* padding: 1rem; */
-}
-
-.media-desktop {
-  display: none;
 }
 
 .faq {
@@ -54,7 +56,7 @@ body {
   padding: 0 0.5em 2em 0;
 }
 
-.faq h1 {
+.faq-header {
   text-align: center;
   font-size: 3.5rem;
   margin-bottom: 4rem;
@@ -70,7 +72,7 @@ body {
   width: 95%;
   height: auto;
   transform: translateX(-10px);
-  background-image: url("images/bg-pattern-mobile.svg");
+  background-image: url("assets/images/bg-pattern-mobile.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 90%;
@@ -104,9 +106,7 @@ button:hover {
 }
 
 .accordion-question.collapse::after {
-  content: url("images/icon-arrow-down.svg");
-  height: 13px;
-  width: 10px;
+  content: url("assets/images/icon-arrow-down.svg");
   transition: transform 300ms ease-in-out;
 }
 
@@ -115,7 +115,7 @@ button:hover {
 }
 
 .accordion-question.show::after {
-  content: url("images/icon-arrow-down.svg");
+  content: url("assets/images/icon-arrow-down.svg");
   height: 13px;
   width: 10px;
   transform: rotate(180deg);
@@ -130,12 +130,18 @@ button:hover {
 }
 
 @media screen and (min-width: 900px) {
+
+  body {
+    padding: 4.5rem;
+    height: 100vh;
+    max-height: 100vh;
+  }
   .container {
     display: flex;
     flex-direction: row;
-    /* margin: 7rem auto; */
     padding: 4rem 0;
-    background-image: url("images/bg-pattern-desktop.svg");
+    margin: 0 0;
+    background-image: url("assets/images/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -52rem -27rem;
@@ -144,7 +150,6 @@ button:hover {
   .media,
   .faq {
     flex: 1;
-    /* overflow: hidden; */
   }
 
   .faq h1 {

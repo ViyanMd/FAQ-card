@@ -12,9 +12,10 @@ accordionQuestion.forEach((item) => {
       });
     }
     
-    const height = item.nextElementSibling.scrollHeight;
     item.classList.toggle("show");
-
+    
+    const height = item.nextElementSibling.scrollHeight;
+    
     if (item.classList.contains("show")) {
       item.nextElementSibling.style.maxHeight = `${height}px`;
     }
